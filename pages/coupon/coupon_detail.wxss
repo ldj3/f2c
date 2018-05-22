@@ -1,0 +1,38 @@
+.coupon_detail {
+}
+
+.coupon_detail_box {
+ margin: 20rpx;
+ padding: 20rpx;
+ background: #fff;
+}
+.coupon_detail_text01 text {
+  display: block;
+  font-size: 30rpx;
+}
+.coupon_detail_text01 text:nth-child(2) {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+.coupon_detail_text01 text:nth-child(3) {
+  padding-top: 28rpx;
+}
+.coupon_detail_text02 {
+  padding: 20rpx;
+}
+.coupon_detail_text02 text {
+  display: block;
+  font-size: 26rpx;
+  color: #999;
+  padding-top: 5rpx;
+}
+.coupon_shopping {
+  margin: 40rpx 20rpx;
+  display: block;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #ff4900;
+  color: #fff;
+}

@@ -1,0 +1,39 @@
+page {
+  background: #fff;
+}
+.information_new {
+}
+.information_new_list navigator:nth-child(1){
+  border-top: 2rpx solid #ddd;
+}
+.information_new_list navigator {
+  position: relative;
+  height: 140rpx;
+  line-height: 140rpx;
+  padding: 0 30rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+.information_new_list navigator image {
+  float: left;
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 20rpx;
+}
+.information_new_name {
+  font-size: 30rpx;
+  float: left;
+  padding-left: 20rpx;
+}
+.information_new_time {
+  float: right;
+  font-size: 28rpx;
+}
+.information_new_dian {
+  position: absolute;
+  width: 15rpx;
+  height: 15rpx;
+  background: red;
+  left: 120rpx;
+  top: 18rpx;
+  border-radius: 50%;
+}

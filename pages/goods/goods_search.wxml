@@ -1,0 +1,38 @@
+<!--pages/goods/goods_search.wxml-->
+<view class='goods_search'>
+  <!-- 搜索框 -->
+  <view class='goods_search_box'>
+    <view class='goods_search_input'>
+          <icon class='icon_search' type="search" size="20"/>
+          <input type='tel' placeholder='搜索您想要的商品' value='{{searchValue}}' auto-focus></input>
+          <icon class='icon_cancel' catchtap='cancel' type="cancel" size="20"/>
+    </view>
+    <view class='goods_search_text'><text>搜索</text></view>
+  </view>
+  <!-- 导航 -->
+  <view class='goods_search_nav'>
+    <block wx:for="{{navList}}" wx:key='key'>
+			<view class="{{curNav == item.id ? 'selected' : ''}}" bindtap="selectNav" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+		</block>
+   <view><navigator open-type="redirect" url='/pages/index/index' hover-class='none'>筛选</navigator></view>
+  </view>
+  <!-- 商品列表 -->
+  <view class='goods_list'>
+     <block wx:for='{{goodsList}}' wx:key='key'>
+       <navigator open-type="redirect" url='{{item.url}}'>
+         <view class='goods_list_img'><image src='{{item.src}}'></image></view>
+         <view class='goods_list_box'>
+            <text class='goods_list_title'>{{item.title}}</text>
+            <text class='goods_list_money'>¥{{item.money}}</text>
+         </view>
+      </navigator>
+     </block>
+  </view>
+  <!-- 已加载全部商品 -->
+  <view class='loading_over'><text>已加载全部商品</text></view>
+
+</view>
+
+
+
+

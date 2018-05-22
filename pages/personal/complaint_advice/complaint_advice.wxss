@@ -1,0 +1,50 @@
+/* pages/personal/complaint_advice/complaint_advice.wxss */
+.complaint_advice_list {
+  padding-bottom: 100rxp;
+}
+.complaint_advice_box {
+
+}
+.complaint_advice_box view:nth-child(1) {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  color: #555;
+}
+.complaint_advice_box view:nth-child(2) {
+  background: #fff;
+  padding: 20rpx;
+  display: flex;
+  flex-direction:row;
+  overflow: hidden;
+}
+.complaint_advice_box view:nth-child(2) text:nth-child(1) {
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  background: #fdb137;
+  font-size: 26rpx;
+}
+.complaint_advice_box view:nth-child(2) text:nth-child(2) {
+   display: inline-block;
+   flex:1;
+   flex-grow:1;
+   font-size: 28rpx;
+   padding-left: 20rpx;
+   padding: 10rpx;
+} 
+.advice_add {
+  position: fixed;
+  bottom: 0;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  width: 100%;
+  background: #fdb137;
+  color: #fff;
+  font-size: 30rpx;
+}

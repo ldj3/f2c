@@ -1,0 +1,11 @@
+<!--pages/personal/complaint_advice/advice_add.wxml-->
+<view class='advice_add'>
+  <view class='advice_add_textarea'>
+    <textarea></textarea>
+  </view>
+
+  <navigator hover-class='none' class='advice_tijiao'>提交</navigator>
+  <contact-button class='advice_kefu' type="default-light" size="20"session-from="weapp">联系客服</contact-button>
+
+
+</view>

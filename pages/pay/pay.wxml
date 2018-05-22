@@ -1,0 +1,53 @@
+<!--pages/pay/pay.wxml-->
+<view class='pay'>
+  <!-- 收货地址 -->
+  <view class='pay_address'>
+    <navigator  url='/pages/address/address'>
+      <view class='pay_address_icon01'><icon type='success' size='25'></icon></view>
+      <view class='pay_address_text'>
+        <text>收件人：测试 1223344556</text>
+        <text>收货地址：广东省广州市海珠区海珠富力</text>
+      </view>
+      <view class='pay_address_icon02'><icon type='download' size='25'></icon></view>
+   </navigator>
+  </view>
+  <!-- 商品信息 -->
+  <view class='pay_goods'>
+    <block wx:for="{{payGoods}}">
+      <view class='pay_goods_img'><image src='{{item.src}}'></image></view>
+      <view class='pay_goods_text'>
+        <view class='pay_goods_title'><text>{{item.title}}</text></view>
+        <view class='pay_goods_money'>
+          <text>{{item.money}}</text>
+          <text>x{{item.num}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 订单信息 -->
+  <view class='pay_information'>
+   <view><text>商品总价：</text><text>￥58.00</text></view>
+   <view><text>会员vip总价：</text><text>￥58.00</text></view>
+   <view><text>运费：</text><text>＋￥8.00</text></view>
+   <view><text>优惠券：</text><navigator url='/pages/coupon/coupon_choice' hover-class='none'>请选择优惠券></navigator></view>
+  </view>
+  <view class='pay_information_jifen'>
+   <view><text>所获积分：</text><text>返积分20</text></view>
+  </view>
+  <view class='pay_information_message'>
+    <text>订单留言</text>
+    <textarea></textarea>
+  </view>
+  <view class='pay_information_money'>
+    <view>
+     应付金额： <text>￥58.00－8.00＝50.00</text>
+    </view>
+  </view>
+  <view class='pay_information_but'>
+    <button bindtap='pay'>微信支付</button>
+  </view>
+
+
+
+
+</view>

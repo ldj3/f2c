@@ -1,0 +1,29 @@
+<!--pages/personal/property/property.wxml-->
+<view class='property'>
+  <navigator url='/pages/personal/property/incarnate'>
+    <view class='property_head'>
+    <view><text>￥270.00</text></view>
+    <view><text>可提现金额（元）</text></view>
+    <view><text>[不含待结算和已体现部分]</text></view>
+  </view>
+  </navigator>
+
+  <view class='property_list'>
+    <navigator><text>0</text><text>推广订单（笔）</text></navigator>
+    <navigator><text>0.00</text><text>累计金币收入（元）</text></navigator>
+    <navigator><text>0</text><text>本月新增客户</text></navigator>
+    <navigator><text>0</text><text>全部客户</text></navigator>
+    <navigator url='/pages/personal/property/invite'><text>0</text><text>本月新增邀请</text></navigator>
+    <navigator url='/pages/personal/property/invite_all'><text>0</text><text>全部邀请</text></navigator>
+  
+  </view>
+
+
+
+
+
+
+
+
+
+</view>

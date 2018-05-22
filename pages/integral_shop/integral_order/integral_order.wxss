@@ -1,0 +1,92 @@
+/* pages/integral_shop/integral_order/integral_order.wxss */
+.integral_order {}
+.integral_order_box {height: 280rpx;}
+.integral_box_head {
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fff;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.integral_box_head text:nth-child(1) {
+  display: inline-block;
+  flex:1;
+  flex-grow:1;
+  font-size: 28rpx;
+}
+.integral_box_head text:nth-child(2) {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #ff4900;
+}
+.integral_box_main {
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 2rpx solid #ddd;
+  display: flex;
+  margin-top: 5rpx;
+}
+.integral_box_left {
+  display: inline-block;
+  width: 20%;
+  height: 140rpx;
+  border: 2rpx solid #ddd;
+}
+.integral_box_left image {
+  width: 100%;
+  height: 100%;
+}
+.integral_box_right {
+  display: inline-block;
+  width: 80%;
+  padding-left: 15rpx;
+}
+.integral_box_right view:nth-child(1) {
+  font-size: 30rpx;
+  height: 70rpx;
+  line-height: 35rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  padding-top: 10rpx;
+}
+.integral_box_right view:nth-child(2) {
+  padding-top: 10rpx;
+  font-size: 28rpx;
+}
+.integral_box_right view:nth-child(2) text:nth-child(2) {
+  float: right;
+}
+.swiper-tab{  
+  width: 100%;  
+  border-bottom: 2rpx solid #ddd;  
+  text-align: center;  
+  line-height: 80rpx;
+  display: flex;
+  flex-direction:row;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background: #f8f8f8;
+}  
+.my_order_list {
+  margin-top: 90rpx;
+  height: 100%;
+  overflow-y: scroll;
+}
+.swiper-tab-list{  
+  font-size: 30rpx;  
+  display: inline-block;  
+  flex:1;
+  flex-grow:1;
+  text-align: center;
+}  
+.on{ 
+  color: #fff;   
+  background: #ff4900;
+}

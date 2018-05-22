@@ -1,0 +1,54 @@
+/* pages/personal/collect.wxss */
+.collect {
+}
+/* 收藏列表 */
+.goods_list {
+  background: #fff;
+}
+.goods_list navigator:nth-child(1) {
+  border-top: 2rpx solid #ddd;
+}
+.goods_list navigator {
+  display: flex;
+  flex-direction:row;
+  /* width: 100%; */
+  overflow: hidden;
+  border-bottom: 2rpx solid #ddd;
+  padding: 15rpx 20rpx;
+}
+.goods_list navigator .goods_list_box {
+  display: inline-block;
+  flex:1;
+  flex-grow:1;
+  margin-right: 15rpx;
+}
+.goods_list_img {
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 20rpx;
+}
+.goods_list_img image {
+  width: 140rpx;
+  height: 140rpx;
+}
+.goods_list_title {
+  color: #333333;
+  font-size: 30rpx;
+  height: 70rpx;
+  line-height: 35rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  margin-right: 15rpx;
+}
+.goods_list_money {
+  display: block;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+}
+.collect_cancel {
+  margin-top: 45rpx;
+}

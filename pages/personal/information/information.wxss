@@ -1,0 +1,78 @@
+/* pages/personal/information/information.wxss */
+.information {
+  padding-top: 90rpx;
+}
+.header_other {
+  text-align: center;
+}
+.header_other text {
+  display: inline-block;
+  font-size: 32rpx;
+  border-left: 2rpx solid #aaa;
+  width: 100rpx;
+}
+.information_avatar {
+  height: 140rpx;
+  line-height: 140rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  border-top: 2rpx solid #ddd;
+  border-bottom: 2rpx solid #ddd;
+}
+.information_avatar text {
+  display: inline-block;
+  font-size: 30rpx;
+}
+.information_avatar image {
+  float: right;
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+.information_list {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 30rpx;
+  background: #fff;
+  border-bottom: 2rpx solid #ddd;
+}
+.information_list view:nth-child(1) text {
+  font-size: 30rpx;
+}
+.information_list view:nth-child(2) {
+  display: inline-block;
+  text-align: right;
+  flex: 1;
+  flex-grow: 1;
+}
+.information_list view:nth-child(2) text {
+  font-size: 30rpx;
+  color: #9c9c9c;
+}
+.information_list view:nth-child(2) image {
+  display: inline-block;
+  width: 20rpx;
+  height: 30rpx;
+}
+.information_list view:nth-child(2) input {
+  font-size: 30rpx;
+  margin-top: 25rpx;
+}
+.information_text_color {
+   color: #ff440d!important;
+   padding-left: 10rpx;
+}
+.information_tishi {
+   display: block;
+   overflow: hidden;
+   margin: 10rpx 30rpx 0 0;
+}
+.information_tishi text {
+  float: right;
+  color: #ff440d;
+  font-size: 26rpx;
+}

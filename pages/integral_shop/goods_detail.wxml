@@ -1,0 +1,46 @@
+<!--pages/integral_shop/goods_detail.wxml-->
+<view class='goods_detail'>
+  <!-- 广告图 -->
+    <view class='swiper_img'>
+    <swiper indicator-dots="ture" autoplay="true" interval="3000" indicator-color="#822802" indicator-active-color="#ff4800">
+    <block wx:for="{{imgSwiper}}">
+      <navigator open-type='reLaunch' url='{{item.url}}' hover-class="none">
+       <swiper-item>
+        <image src="{{item.images}}"/>
+       </swiper-item>
+      </navigator>
+    </block>
+    </swiper>
+  </view>
+
+  <view class='goods_text'>
+    <view>{{goods_name}}</view>
+    <view>{{goods_text}}</view>
+    <view>{{integral_num}}积分</view>
+    <view><text>已兑换：{{exchange_num}}</text><text>仅限：{{limit_num}}</text></view>
+  </view>
+  <view  class='goods_text01'>
+    <view>积分使用说明</view>
+    <view>积分购买商品很优惠！</view>
+  </view>
+  <!-- 图文详情 -->
+  <view class='goods_text02'>
+    <view><text></text><text>图文详情</text><text></text></view>
+    <image src='../images/goods02.jpg' mode="widthFix"></image>
+  </view>
+  <!-- 底部 -->
+  <view class='footer'>
+   <text>我的积分：{{my_integral}}</text>
+   <navigator hover-class='none'>立即兑换</navigator>
+  
+  
+  
+  </view>
+
+
+
+
+
+
+
+</view>

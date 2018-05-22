@@ -1,0 +1,23 @@
+<!--pages/personal/complaint_advice/complaint_advice.wxml-->
+<view class='complaint_advice'>
+  <view class='complaint_advice_list'>
+     <block wx:for="{{list}}">
+     <view class='complaint_advice_box'>
+      <view><text>{{item.time}}</text></view>
+      <view><text>{{item.name}}</text><text>{{item.text}}</text></view>
+     </view>
+     </block>
+    
+  </view>
+
+  <navigator hover-class='none' url='/pages/personal/complaint_advice/advice_add' class='advice_add'>新增</navigator>
+
+
+
+
+
+
+
+
+
+</view>

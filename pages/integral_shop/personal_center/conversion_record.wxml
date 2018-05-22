@@ -1,0 +1,21 @@
+<!--pages/integral_shop/personal_center/conversion_record.wxml-->
+<view class='conversion_record'>
+   <view class='conversion_record_box'>
+     <block wx:for="{{list}}">
+        <navigator url='' hover-class='none'>
+          <view class='conversion_box_left'><image src='{{item.src}}'></image></view>
+          <view class='conversion_box_right'>
+            <view>{{item.title}}</view>
+            <view><text>{{item.jifen}}积分</text><text>{{item.time}}</text></view>
+          </view>
+        </navigator>
+     </block>
+   
+   
+   </view>
+
+
+
+
+
+</view>

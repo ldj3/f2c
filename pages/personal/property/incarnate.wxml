@@ -1,0 +1,13 @@
+<!--pages/personal/property/incarnate.wxml-->
+<view class='incarnate'>
+  <view class='incarnate_text'><text>可提现金额</text></view>
+  <view class='incarnate_money'><text>￥270.00</text></view>
+  <view class='incarnate_button'><button>提现</button></view>
+  <view class='incarnate_list'>
+   <view><text>已结算金额</text><text>￥270.00</text></view>
+   <view><text>待结算金额</text><text>￥0.00</text></view>
+  </view>
+
+
+
+</view>

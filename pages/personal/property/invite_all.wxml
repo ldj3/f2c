@@ -1,0 +1,7 @@
+<!--pages/personal/property/invite_all.wxml-->
+<view class='invite'>
+   <view class='invite_head'><text>邀请对象</text><text>邀请日期</text></view>
+
+
+
+</view>

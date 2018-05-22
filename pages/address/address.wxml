@@ -1,0 +1,35 @@
+<!--pages/address/address.wxml-->
+<view class='address'>
+  <view class='address_box address_box_active'>
+    <view><text>测试</text><text>13008000000</text></view>
+    <view><text>广东省广州市海珠区 海珠富力</text></view>
+    <view class='address_navigator'><navigator>使用该地址</navigator><navigator><icon type="success" size="20"></icon></navigator></view>  
+  </view>
+  <view class='address_box'>
+    <view><text>测试</text><text>13008000000</text></view>
+    <view><text>广东省广州市海珠区 海珠富力</text></view>
+    <view class='address_navigator'><navigator>使用该地址</navigator><navigator><icon type="success" size="20"></icon></navigator></view>  
+  </view>
+  <view class='address_box'>
+    <view><text>测试</text><text>13008000000</text></view>
+    <view><text>广东省广州市海珠区 海珠富力</text></view>
+    <view class='address_navigator'><navigator>使用该地址</navigator><navigator><icon type="success" size="20"></icon></navigator></view>  
+  </view>
+  
+  <!-- 添加新地址 -->
+  <view class='address_add'>
+    <navigator url='/pages/address/address_add'>添加新地址</navigator>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

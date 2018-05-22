@@ -1,0 +1,5 @@
+<!--pages/clear/clear.wxml-->
+ <view class='logs_text'>
+  <text>页面建设中，敬请期待！</text>
+  <text>自动跳转首页...</text>
+</view> 

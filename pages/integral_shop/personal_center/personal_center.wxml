@@ -1,0 +1,54 @@
+<!--pages/integral_shop/personal_center/personal_center.wxml-->
+<view class='personal_center'>
+   <view class="head_title">
+     <navigator  hover-class="none" url='/pages/personal/information/information_new'><view class="head_title_sousuo"><icon type="success" size="20"/></view></navigator>
+    <view class="head_title_text"><text>个人中心</text></view>
+    <navigator  hover-class="none" open-type='reLaunch' url='/pages/personal/personal'><view class="head_title_sousuo"><icon type="success" size="20"/></view></navigator>
+  </view>
+
+  <!-- 头像 -->
+  <view class='personal_box'>
+     <view class='personal_box_name'>
+      <image src="{{userInfo.avatarUrl}}"></image>
+      <view class='personal_name_text'>
+        <text>{{userInfo.nickName}}</text>
+      </view>
+      <view class="edit_message"><navigator url='/pages/personal/information/information' hover-class='none'>编辑会员信息</navigator></view>
+    </view> 
+  <!-- 列表 -->
+  <view>
+      <view class='help_list'>
+    <block wx:for="{{list}}">
+      <navigator url='{{item.url}}' hover-class='none'>
+        <view>
+          <text>{{item.text}}</text>
+          <image src='../../images/next_icon.png'></image>
+        </view>
+      </navigator> 
+    </block>
+  </view>
+  
+  
+  
+  </view>
+  
+  
+  
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

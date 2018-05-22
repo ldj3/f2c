@@ -1,0 +1,17 @@
+<!--pages/personal/help/heilp.wxml-->
+<view class='help'>
+  <view class='help_list'>
+    <block wx:for="{{list}}">
+      <navigator url='{{item.url}}' hover-class='none'>
+        <view>
+          <text>{{item.text}}</text>
+          <image src='../../images/next_icon.png'></image>
+        </view>
+      </navigator> 
+    </block>
+  </view>
+
+
+
+
+</view>

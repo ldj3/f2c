@@ -1,0 +1,78 @@
+ page {
+  background-color:#fff;
+} 
+/* 分类页面样式 */  
+.classify {
+}
+.classify_more {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  height: 90rpx;
+  background: #fff;
+  text-align: left;
+  padding: 0 20rpx;
+  border-top: 20rpx solid #f8f8f8;
+  border-bottom: 20rpx solid #f8f8f8;
+}
+.classify_text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #333;
+  font-size: 32rpx;
+  overflow: hidden;
+  justify-content: left;
+}
+.classify_text text {
+  overflow: hidden;
+  word-break:keep-all;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.classify_back {
+
+  display: flex;
+  align-items: center;
+  width: 100rpx;
+  font-size: 36rpx;
+  overflow: hidden;
+  justify-content: center;
+  
+}
+.classify_back image {
+  width: 20rpx;
+  height: 40rpx;
+}
+.classify_list {
+  border-bottom: 2rpx solid #ddd;
+}
+.classify_list navigator {
+  display: inline-block;
+  width: 49%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #f8f8f8;
+  margin-top: 15rpx;
+  background: #fff;
+}
+.classify_list navigator text {
+  display: block;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+  background: #f8f8f8;
+}
+.classify_list navigator:nth-child(2n) {
+    margin-left: 2%;
+}
+.classify_head {
+  border-bottom: 2rpx solid #ddd;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  height: 90rpx;
+  background: #fff;
+  text-align: left;
+  padding: 0 20rpx;
+}

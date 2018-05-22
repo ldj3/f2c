@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "red",
+    "navigationBarTitleText": "短发短发",
+    "navigationBarTextStyle":"black"
+  }
+}

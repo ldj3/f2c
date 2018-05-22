@@ -1,0 +1,30 @@
+<!--pages/personal/after_sale/after_sale.wxml-->
+<view class='after_sale'>
+  <!-- 列表 -->
+  <view class='after_sale_list'>
+    <navigator hover-class='none' url='/pages/personal/after_sale/after_sale_detail'>
+      <view><image src='../../images/download-1.jpg'></image></view>  
+      <view>
+        <text>玫瑰花玫瑰花🌹</text>
+        <text>商品码:00005721</text>
+      </view>  
+      <view><text>售后完成</text></view>
+    </navigator>
+    <navigator hover-class='none' url='/pages/personal/after_sale/after_sale_detail'>
+      <view><image src='../../images/download-1.jpg'></image></view>  
+      <view>
+        <text>玫瑰花玫瑰花🌹</text>
+        <text>商品码:00005721</text>
+      </view>  
+      <view><text>售后完成</text></view>
+    </navigator>
+  
+  
+  </view>
+
+
+
+
+
+
+</view>

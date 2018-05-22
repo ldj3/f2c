@@ -1,0 +1,33 @@
+/* pages/personal/complaint_advice/advice_add.wxss */
+.advice_add_textarea {
+ margin-top: 20rpx;
+}
+.advice_add_textarea textarea {
+  display: block;
+  border: 2rpx solid #ddd;
+  background: #fff;
+  width: 100%;
+  font-size: 30rpx;
+  padding: 20rpx;
+} 
+.advice_tijiao {
+  display: block;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 40rpx 20rpx;
+  background: #fa3008;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+}
+.advice_kefu {
+  display: block;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 40rpx 20rpx;
+  background: #fff;
+  text-align: center;
+  border: 2rpx solid #ddd;
+  font-size: 30rpx;
+  color: #999;
+}

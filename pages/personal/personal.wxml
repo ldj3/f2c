@@ -1,0 +1,56 @@
+<!--pages/personal/personal.wxml-->
+<view class='personal'>
+  <!-- 头部 -->
+  <!-- class='personal_icon_center' -->
+  <view class='personal_head_box'>
+    <navigator url='/pages/personal/information/information' class='personal_icon_center' hover-class='none'><image src='../images/center.png'></image> </navigator>
+    <navigator url='/pages/personal/information/information_new' class='personal_icon_msg' hover-class='none'><image src='../images/msg.png'></image><text></text></navigator>
+     <view class='personal_box_name'>
+      <image src="{{userInfo.avatarUrl}}"></image>
+      <view class='personal_name_text'>
+        <text>{{userInfo.nickName}}</text>
+        <text>Lv.0</text>
+      </view>
+    </view> 
+    <!-- 我的资产 -->
+    <view class='personal_my_property'>
+      <navigator url='/pages/personal/property/property'>我的资产 ›</navigator>
+    </view>
+  </view>
+  <!-- 收藏／积分／优惠券 -->
+  <view class='personal_nav_list'>
+  <view><navigator url='/pages/personal/collect' hover-class='none'><text>收藏</text><text>4</text></navigator></view>
+   <view><navigator url='/pages/personal/integral' hover-class='none'><text>积分</text><text>84</text></navigator></view>
+    <view><navigator url='/pages/coupon/my_coupon' hover-class='none'> <text>优惠券</text><text>2</text></navigator></view>
+
+  </view>
+
+  <!-- 我的订单 -->
+   <navigator class='personal_order' url='/pages/order/my_order' hover-class='none'>
+     <text>我的订单</text>
+     <text>查看全部订单›</text>
+   </navigator>
+
+   <!-- 列表一 -->
+   <view class='personal_order_list'>
+    <block wx:for='{{orderList}}'>
+      <navigator class='' url='{{item.url}}' hover-class='none'>
+       <image src='{{item.src}}'></image>
+       <text>{{item.text}}</text>
+     </navigator>
+    </block>
+   </view>
+   <!-- 列表二 -->
+   <view class='personal_list'>
+    <block wx:for='{{personalList}}'>
+      <navigator class='' url='{{item.url}}' hover-class='none'>
+       <image src='{{item.src}}'></image>
+       <text>{{item.text}}</text>
+     </navigator>
+    </block>
+   </view>
+   
+
+
+
+</view>

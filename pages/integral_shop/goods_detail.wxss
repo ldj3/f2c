@@ -1,0 +1,113 @@
+/* pages/integral_shop/goods_detail.wxss */
+.goods_detail {
+  padding-bottom: 120rpx;
+}
+/* 广告图 */
+.swiper_img {
+}
+.swiper_img swiper {
+  width: 100%;
+  height: 650rpx;
+}
+.swiper_img image {
+  width: 100%;
+  height: 100%;
+}
+.goods_text {
+  background: #fff;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+.goods_text view {
+  display: block;
+}
+.goods_text view:nth-child(1) {
+  font-size: 30rpx;
+}
+.goods_text view:nth-child(2) {
+  font-size: 24rpx;
+  color: #333;
+}
+.goods_text view:nth-child(3) {
+  font-size: 36rpx;
+  color: #b0422b;
+  padding-top: 10rpx;
+}
+.goods_text view:nth-child(4) text {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #333;
+  width: 50%;
+}
+.goods_text01 {
+  background: #fff;
+  padding: 20rpx;
+}
+.goods_text01 view:nth-child(1) {
+  display: block;
+  font-size: 36rpx;
+  color: #666;
+}
+.goods_text01 view:nth-child(2) {
+  display: block;
+  font-size: 30rpx;
+  color: #333;
+  padding-top: 5rpx;
+}
+.goods_text02 {
+  background: #fff;
+  padding-top: 30rpx;
+}
+.goods_text02 view {
+  text-align: center;
+  padding-bottom: 20rpx;
+}
+.goods_text02 view text {
+  display: inline-block;
+}
+.goods_text02 view text:nth-child(1) {
+  width: 20%;
+  height: 2rpx;
+  border-top:2rpx solid red;
+  padding-bottom: 5rpx;
+}
+.goods_text02 view text:nth-child(2) {
+  font-size: 30rpx;
+  padding: 0 20rpx;
+}
+.goods_text02 view text:nth-child(3) {
+  width: 20%;
+  height: 2rpx;
+  border-top:2rpx solid red;
+  padding-bottom: 5rpx;
+}
+.goods_text02 image {
+  width: 100%;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  background: #fff;
+  border-top: 2rpx solid #ddd;
+}
+.footer text {
+  display: inline-block;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+}
+.footer navigator {
+  background: #ffb03a;
+  color: #fff;
+  text-align: center;
+  float: right;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+}

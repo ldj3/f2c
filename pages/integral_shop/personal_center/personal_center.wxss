@@ -1,0 +1,117 @@
+/* pages/integral_shop/personal_center/personal_center.wxss */
+
+.head_title {
+ 
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  height: 90rpx;
+  background: #fff;
+  text-align: center;
+  border-bottom: 2rpx solid #aaa;
+  z-index: 1;
+}
+.head_title_sousuo {
+  display: flex;
+  width: 150rpx;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30rpx;
+}
+.head_title_text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #3f3f3f;
+  font-size: 36rpx;
+  overflow: hidden;
+  justify-content: center;
+}
+.head_title_text text {
+  overflow: hidden;
+  word-break:keep-all;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.head_title_saomiao {
+  display: flex;
+  align-items: center;
+  width: 150rpx;
+  font-size: 36rpx;
+  overflow: hidden;
+  justify-content: center;
+}
+.head_title_saomiao image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.personal_box {
+  background: #ff4900;
+}
+.personal_box_name {
+   padding: 40rpx 20rpx 20rpx 20rpx; 
+   border-bottom: 2rpx solid #ddd;
+}
+.personal_box_name image {
+  display: inline-block;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.personal_name_text {
+   position: absolute;
+   left: 130rpx;
+   top: 140rpx;
+}
+.personal_name_text text:nth-child(1) {
+  color: #fff;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+.personal_name_text text:nth-child(2) {
+  color: #fff;
+  font-size: 28rpx;
+  padding: 0rpx 16rpx;
+  background: #f97d3d;
+  border-radius: 30rpx;
+  margin-left: 30rpx;
+}
+.edit_message {
+  float: right;
+  font-size: 28rpx;
+  color: #fff;
+  margin-top: 25rpx;
+}
+.help_list navigator {
+  background: #fff;
+  padding: 0 30rpx;
+}
+.help_list navigator view {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction:row;
+  width: 100%;
+}
+.help_list navigator view  text {
+  display: inline-block;
+  flex:1;
+  flex-grow:1;
+  font-size: 28rpx;
+  color: #333;
+  width: 100%;
+  overflow:hidden; 
+  /* 文字隐藏后添加省略号 */
+  text-overflow:ellipsis;
+  /* 强制不换行 */
+  white-space:nowrap; 
+}
+.help_list navigator view image {
+   width: 20rpx;
+   height: 30rpx;
+   display: inline-block;
+   margin-top: 40rpx;
+}

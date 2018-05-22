@@ -1,0 +1,14 @@
+/* pages/personal/property/invite_all.wxss */
+.invite_head {
+  background: #fff;
+  line-height: 90rpx;
+  padding: 0 30rpx;
+  border-bottom:2rpx solid #ddd;
+}
+.invite_head text {
+  font-size: 28rpx;
+}
+.invite_head text:nth-child(2) {
+  float: right;
+  padding-top: 8rpx;
+}

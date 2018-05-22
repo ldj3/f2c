@@ -1,0 +1,90 @@
+<!--pages/integral_shop/integral_index.wxml-->
+<view class='integral_index'>
+   <view class="head_title">
+    <view class="head_title_saomiao"><image src="../images/saomiao.png"></image></view>
+    <view class="head_title_text"><text>积分商城</text></view>
+    <navigator  hover-class="none" url='/pages/integral_shop/personal_center/personal_center'><view class="head_title_sousuo"><icon type="success" size="20"/></view></navigator>
+  </view>
+  <!-- 广告图 -->
+  <view class='swiper_img'>
+    <swiper indicator-dots="ture" autoplay="true" interval="3000" indicator-color="#822802" indicator-active-color="#ff4800">
+    <block wx:for="{{imgSwiper}}">
+      <navigator url='{{item.url}}' hover-class="none">
+       <swiper-item>
+        <image src="{{item.images}}"/>
+        <!-- <text class='swiper_text'>商城首页</text> -->
+       </swiper-item>
+      </navigator>
+    </block>
+    </swiper>
+  </view>
+  <!-- 导航 -->
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on':''}}" data-current="0" bindtap="swichNav">全部商品</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on':''}}" data-current="1" bindtap="swichNav">我可兑换</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on':''}}" data-current="2" bindtap="swichNav">兑换排行</view>
+    <view class="swiper-tab-list {{currentTab==3 ? 'on':''}}" data-current="3" bindtap="swichNav">积分值</view>
+  </view>
+  <view class='integral_list'>
+    <swiper current="{{currentTab}}" class='swiper-box' duration='300' style='height:{{winHeight}}rpx;min-height:{{minHeight}}rpx' bindchange="bindChange">
+    <!-- 全部商品 -->
+    <swiper-item>
+     <block wx:for="{{all_goods}}">
+      <navigator url='{{item.url}}' hover-class='none'>
+          <view class='goods_box'>
+             <view><image src='{{item.src}}'></image></view>
+             <view><text>{{item.title}}</text></view>
+             <view><text>{{item.money}}积分</text></view>
+          </view>
+      </navigator>
+     </block>
+    </swiper-item>
+    <!-- 我可兑换 -->
+    <swiper-item>
+      <block wx:for="{{exchange_ok}}">
+      <navigator url='{{item.url}}' hover-class='none'>
+          <view class='goods_box'>
+             <view><image src='{{item.src}}'></image></view>
+             <view><text>{{item.title}}</text></view>
+             <view><text>{{item.money}}积分</text></view>
+          </view>
+      </navigator>
+     </block>
+    </swiper-item>
+    <!-- 兑换排行 -->
+    <swiper-item>
+      <block wx:for="{{exchange_seniority}}">
+      <navigator url='{{item.url}}' hover-class='none'>
+          <view class='goods_box'>
+             <view><image src='{{item.src}}'></image></view>
+             <view><text>{{item.title}}</text></view>
+             <view><text>{{item.money}}积分</text></view>
+          </view>
+      </navigator>
+     </block>
+    </swiper-item>
+    <!-- 积分值 -->
+    <swiper-item>
+     <block wx:for="{{integral_num}}">
+      <navigator url='{{item.url}}' hover-class='none'>
+          <view class='goods_box'>
+             <view><image src='{{item.src}}'></image></view>
+             <view><text>{{item.title}}</text></view>
+             <view><text>{{item.money}}积分</text></view>
+          </view>
+      </navigator>
+     </block>
+    </swiper-item>
+    </swiper>
+  </view>
+   
+  <!-- 底部 -->
+  <view class='integral_footer'>
+    <text>我的积分：{{jifen_num}}</text>
+    <navigator hover-class='none'>签到</navigator>
+    <navigator hover-class='none' url='/pages/integral_shop/personal_center/conversion_record'>兑换纪录</navigator>
+  </view>
+
+
+
+</view>

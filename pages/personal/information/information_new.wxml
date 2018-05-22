@@ -1,0 +1,47 @@
+<!--pages/personal/information/information_new.wxml-->
+<view class='information_new'>
+  <!-- 消息列表 -->
+  <view class='information_new_list'>
+    <navigator>
+      <image src='../../images/msg_icon01.png'></image>
+      <text class='information_new_name'>活动消息</text>
+      <text class='information_new_time'>2017-11-22 12:12</text>
+      <text class='information_new_dian'></text>
+    </navigator>
+    <navigator>
+      <image src='../../images/msg_icon02.png'></image>
+      <text class='information_new_name'>订单消息</text>
+      <text class='information_new_time'>2017-11-22 12:12</text>
+      <text class='information_new_dian'></text>
+    </navigator>
+    <navigator>
+      <image src='../../images/msg_icon03.png'></image>
+      <text class='information_new_name'>资产消息</text>
+      <text class='information_new_time'>2017-11-22 12:12</text>
+      <text class='information_new_dian'></text>
+    </navigator>
+    <navigator>
+      <image src='../../images/msg_icon04.png'></image>
+      <text class='information_new_name'>奖品消息</text>
+      <text class='information_new_time'>2017-11-22 12:12</text>
+      <text class='information_new_dian'></text>
+    </navigator>
+  </view>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

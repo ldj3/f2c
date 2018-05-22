@@ -1,0 +1,76 @@
+<!--pages/carts/carts.wxml-->
+<view class='carts'>
+  <!-- 公共头部 -->
+  <view class="header">
+    <!-- <navigator open-type='navigateBack'><view class="header_back"><image src="../images/back_icon.png"></image></view></navigator> -->
+    <view class="header_text"><text></text></view>
+    <!-- <view class='header_other'></view> -->
+    <view class="get_coupon"><navigator url='/pages/coupon/coupon'>领取优惠券</navigator> </view>
+  </view>
+  <!-- 购物车列表 -->
+  <view>
+    <block wx:for='{{carts}}'>
+      <navigator open-type='reLaunch' class="carts_box" hover-class='none' url="{{item.url}}">
+        <view class='carts_goods_icon'>
+          <icon wx:if='{{item.selected}}' type='success' color='red' catchtap='selectList' data-index='{{index}}'></icon>
+          <icon wx:else type='circle' catchtap='selectList' data-index='{{index}}'></icon>
+        </view>
+        <view class='carts_goods_img'><image src='{{item.src}}'></image></view>
+        <view class='carts_goods_box'>
+          <text class='carts_goods_title'>{{item.title}}</text>
+          <text class='carts_goods_nature'>{{item.nature}}</text>
+          <text class='carts_goods_price'>￥{{item.price}}</text>
+        </view>
+        <!-- 删除按钮 -->
+        <view>
+          <icon type='cancel' catchtap='delectList' data-index='{{idnex}}'></icon>
+        </view>
+        <view class='carts_input'>
+            <input type="" disabled value='－' catchtap='minusCount' data-index='{{index}}' placeholder=""/>
+            <input type="" disabled catchtap='carts_goods_num' value='{{item.num}}' placeholder=""/>
+            <input type="" disabled value='＋' catchtap='addCount' data-index='{{index}}' placeholder=""/>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <!-- 全选／结算 -->
+  <view class='carts_footer'>
+     <!-- wx:if 是否全选显示不同图标 -->
+    <view class='carts_footer_selectall'>
+      <icon wx:if='{{selectAllStatus}}' type='success' color='red' catchtap='selectAll'></icon>
+      <icon wx:else type='circle' catchtap='selectAll'></icon>
+      <text>全选</text>
+    </view>
+    <!-- 总价 -->
+    <view class='carts_footer_totalprice'>合计: <text class='carts_totalprice_text'>￥{{totalPrice}}</text><text class='carts_totalprice_freight'>(不含运费)</text></view>
+    <!-- 结算 -->
+    <view class='carts_get_clearing' bindtap='carts_get_clearing'>
+     <navigator open-type='reLaunch'>去结算</navigator>
+    </view>
+  </view>
+
+  <!-- 购物车为空 -->
+  <view class="carts_no {{hasList?'hide':''}}">
+   <text>购物车是空的哦～</text>
+  </view>
+  <!-- 提示添加商品 -->
+  <view class="carts_tihsi_add {{addList?'show':''}}">
+   <text>请添加商品！</text>
+  </view>
+   <loading hidden="{{hiddenLoading}}">请添加商品！</loading> 
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+</view>

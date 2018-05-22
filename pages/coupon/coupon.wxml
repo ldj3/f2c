@@ -1,0 +1,22 @@
+<!--pages/coupon/coupon.wxml-->
+<view class='coupon'>
+  <!-- 优惠券列表 -->
+  <view class='couponlist'>
+    <block wx:for='{{couponList}}' wx:key='key'> 
+      <view class='couponlist_box'>
+          <view class="couponlist_left {{item.id == colorOne ? 'colorOne' : ''}} {{item.id == colorTwo ? 'colorTwo' : ''}} {{item.id == colorThree ? 'colorThree' : ''}}"><text>{{item.name}}</text></view>   
+          <view class='couponlist_right'>
+            <view class='couponlist_right_title'><text>{{item.title}}</text></view>
+            <view class='couponlist_right_text'><text>{{item.text}}</text></view>
+            <view class='couponlist_right_time'><text>{{item.time}}</text></view>
+            <view class="couponlist_right_get {{item.selected == drawColor ? 'drawColor' : ''}}" bindtap='couponGet' data-index='{{index}}'><text>{{item.draw}}</text></view>
+          </view>  
+      </view>
+    </block>
+  
+  </view>
+
+
+
+
+</view>

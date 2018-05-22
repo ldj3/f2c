@@ -1,0 +1,115 @@
+/**app.wxss 公共样式**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.text {
+  color: red;
+}
+page {
+  background-color:#f8f8f8;
+}
+/* 头部 */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  height: 90rpx;
+  background: #fff;
+  text-align: center;
+  /* border-bottom: 2rpx solid #aaa; */
+  z-index: 9;
+}
+.header_text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #3f3f3f;
+  font-size: 36rpx;
+  overflow: hidden;
+  justify-content: center;
+}
+.header_text text {
+  overflow: hidden;
+  word-break:keep-all;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.header_back {
+  display: flex;
+  align-items: center;
+  width: 100rpx;
+  font-size: 36rpx;
+  overflow: hidden;
+  justify-content: center;
+  margin-top: 25rpx;
+}
+.header_back image {
+  width: 20rpx;
+  height: 40rpx;
+}
+.header_other {
+  display: flex;
+  width: 100rpx;
+  align-items: center;
+  justify-content: center;
+}
+/* 隐藏 */
+.hide{
+ display: none!important;
+}
+/* 显示 */
+.show{ 
+ display: block!important;
+}
+
+.logs_text {
+  text-align: center;
+  margin-top: 50%;
+  color: #999;
+}
+.logs_text text {
+  display: block;
+  font-size: 36rpx;
+}
+.logs_text text:nth-child(2) {
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+/* 回到顶部 */
+.go_top {
+ position: absolute; 
+ bottom: 150rpx;
+ right: 30rpx; 
+}
+
+
+
+/* icon字体包 */
+
+@font-face {
+  font-family: 'iconfont';  /* project id 524653 */
+  src: url('//at.alicdn.com/t/font_524653_rq6javuze6ei2j4i.eot');
+  src: url('//at.alicdn.com/t/font_524653_rq6javuze6ei2j4i.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_524653_rq6javuze6ei2j4i.woff') format('woff'),
+  url('//at.alicdn.com/t/font_524653_rq6javuze6ei2j4i.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_524653_rq6javuze6ei2j4i.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shouye:before { content: "\e612"; }

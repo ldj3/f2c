@@ -1,0 +1,61 @@
+<!--pages/personal/information/information.wxml-->
+<view class='information'>
+     <!-- 公共头部 -->
+  <view class="header">
+    <navigator open-type='navigateBack'><view class="header_back"><image src=""></image></view></navigator>
+    <view class="header_text"><text></text></view>
+    <view class='header_other'> <text>提交</text> </view>
+  </view>
+  <!-- 头像 -->
+  <view class='information_avatar'>
+    <text>头像</text><image src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <!-- 会员等级 -->
+  <view class='information_list' style='margin-top:20rpx;'>
+    <view><text>会员等级:</text></view>
+    <view><text>20</text><text class='information_text_color'>VIP0</text></view>
+  </view>
+  <!-- 会员成长值： -->
+  <view class='information_list'>
+    <view><text>会员成长值:</text></view>
+    <view><text class='information_text_color'>0</text></view>
+  </view>
+  <!-- 提示 -->
+  <view class='information_tishi'><text>消费1元得1分，等级越高可享权益越大</text></view>
+<!-- 特权 -->
+<navigator>
+    <view class='information_list' style='margin-top:40rpx;'>
+    <view><text>特权</text></view>
+     <view><image src='../../images/next_icon.png'></image></view> 
+  </view>
+</navigator>
+  <!-- 姓名 -->
+   <view class='information_list' style='margin-top:20rpx;'>
+    <view><text>姓名:</text></view>
+    <view><text>{{userInfo.nickName}}</text></view>
+  </view>
+  <!-- 手机号 -->
+   <view class='information_list'>
+    <view><text>手机号:</text></view>
+    <view><text>13388800000</text></view>
+  </view>
+  <!-- 微信号 -->
+  <view class='information_list'>
+    <view><text>微信号:</text></view>
+    <view><input type='text' placeholder='请输入您的微信号'></input> </view>
+  </view>
+  <!-- 生日 -->
+   <view class='information_list'>
+    <view><text>生日:</text></view>
+    <view><text>2017-12-1</text></view>
+  </view>
+  <!-- 收货地址 -->
+<navigator url='/pages/address/address_add'>
+    <view class='information_list'>
+     <view><text>收货地址:</text></view>
+     <view><image src='../../images/next_icon.png'></image></view> 
+    </view>
+</navigator>
+
+
+</view>

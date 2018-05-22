@@ -1,0 +1,168 @@
+/* pages/pay/pay.wxss */
+.pay {
+}
+/* 收货地址 */
+.pay_address {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  margin-top: 10rpx;
+  background: #fff;
+  padding: 15rpx;
+}
+.pay_address navigator {
+  display:flex;
+  align-items:center;
+  width:100%;
+  overflow:hidden;
+  justify-content:center;
+}
+.pay_address_text {
+  display: inline-block;
+  flex: 1;
+  flex-grow: 1;
+  padding: 0 20rpx;
+}
+.pay_address_text text {
+  display: block;
+}
+.pay_address_text text:nth-child(1) {
+  font-size: 30rpx;
+}
+.pay_address_text text:nth-child(2) {
+  font-size: 28rpx;
+  color: #999;
+  padding-top: 10rpx;
+}
+.pay_address_icon01 {
+  display: inline-block;
+  width: 30px;
+}
+.pay_address_icon02 {
+  display: inline-block;
+  width: 30px;
+}
+/* 商品信息 */
+.pay_goods {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background: #fff;
+  padding: 30rpx;
+}
+.pay_goods_img {
+  display: inline-block;
+  border: 2rpx solid #ddd;
+}
+.pay_goods_img image {
+   display: inline-block;
+   width: 160rpx;
+   height: 160rpx;
+}
+.pay_goods_text {
+  flex-direction:row;
+  width: 100%;
+  overflow: hidden;
+  margin-left: 20rpx;
+}
+.pay_goods_title {
+  display: block;
+  color: #666;
+  font-size: 32rpx;
+  height: 70rpx;
+  line-height: 35rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  margin-top: 10rpx;
+}
+.pay_goods_money {
+  display: block;
+  font-size: 30rpx;
+  margin-top:50rpx;
+}
+.pay_goods_money text:nth-child(2) {
+  float: right;
+}
+.pay_information {
+  margin-top: 20rpx;
+}
+.pay_information view {
+  background: #fff;
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+.pay_information view text {
+  font-size: 30rpx;
+}
+.pay_information view text:nth-child(2) {
+  float: right;
+  font-size: 30rpx;
+  margin-top: 8rpx;
+}
+.pay_information view navigator {
+  float:right;
+  font-size: 30rpx;
+  margin-top: 8rpx;
+}
+.pay_information_jifen {
+  margin-top: 10rpx;
+}
+.pay_information_jifen view {
+  background: #fff;
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #ddd;
+  font-size: 30rpx;
+}
+.pay_information_jifen view text:nth-child(2) {
+  float: right;
+  font-size: 30rpx;
+  color: coral;
+}
+.pay_information_message {
+  background: #fff;
+  padding: 10px 15px;
+}
+.pay_information_message text {
+  display: block;
+  font-size: 30rpx;
+}
+.pay_information_message textarea {
+  border:2rpx solid #ddd;
+  display: block;
+  margin-top: 5rpx;
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+.pay_information_money {
+  margin-top: 15rpx;
+  background: #fff;
+  overflow: hidden;
+  padding: 20rpx 30rpx;
+}
+.pay_information_money view {
+  float:right;
+  font-size: 30rpx;
+}
+.pay_information_money view text {
+  font-size: 30rpx;
+  color: coral;
+}
+.pay_information_but {
+  margin-top: 50rpx;
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+.pay_information_but button {
+  display: block;
+  width: 94%;
+  line-height: 95rpx;
+  background: #44ba28;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 0;
+}

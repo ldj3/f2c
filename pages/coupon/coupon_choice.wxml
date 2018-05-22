@@ -1,0 +1,26 @@
+<!--pages/coupon/coupon_choice.wxml-->
+<view class='coupon_choice'>
+   <!-- 暂无可用优惠券 -->
+   <view class='coupon_choice_none'>
+     <image src='../images/bankcard.png'></image>
+     <text>暂无可用优惠券</text>
+   </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

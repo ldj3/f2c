@@ -1,0 +1,35 @@
+/* pages/personal/help/heilp.wxss */
+.help_list {
+
+}
+.help_list navigator {
+  background: #fff;
+  padding: 0 30rpx;
+}
+.help_list navigator view {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction:row;
+  width: 100%;
+}
+.help_list navigator view  text {
+  display: inline-block;
+  flex:1;
+  flex-grow:1;
+  font-size: 28rpx;
+  color: #333;
+  width: 100%;
+  overflow:hidden; 
+  /* 文字隐藏后添加省略号 */
+  text-overflow:ellipsis;
+  /* 强制不换行 */
+  white-space:nowrap; 
+}
+.help_list navigator view image {
+   width: 20rpx;
+   height: 30rpx;
+   display: inline-block;
+   margin-top: 40rpx;
+}

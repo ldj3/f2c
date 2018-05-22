@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/personal/property/property",
+    "pages/personal/property/invite_all",
+    "pages/personal/property/invite",
+    "pages/personal/property/incarnate",
+    "pages/coupon/coupon_choice",
+    "pages/coupon/coupon",
+    "pages/integral_shop/integral_order/integral_order",
+    "pages/integral_shop/personal_center/conversion_record",
+    "pages/integral_shop/goods_detail",
+    "pages/integral_shop/integral_index",
+    "pages/integral_shop/personal_center/personal_center",
+    "pages/personal/complaint_advice/complaint_advice",
+    "pages/personal/help/help",
+    "pages/coupon/my_coupon",
+    "pages/coupon/prize",
+    "pages/order/my_order",
+    "pages/goods/goods_search",
+    "pages/notice/notice",
+    "pages/clear/clear",
+    "pages/logs/logs",
+    "pages/classify/classify",
+    "pages/carts/carts",
+    "pages/goods/goods_detail",
+    "pages/address/address_add",
+    "pages/address/address",
+    "pages/pay/pay",
+    "pages/personal/information/information",
+    "pages/personal/information/information_new",
+    "pages/personal/collect",
+    "pages/personal/integral",
+    "pages/personal/personal",
+    "pages/coupon/coupon_detail",
+    "pages/personal/code",
+    "pages/personal/after_sale/after_sale_detail",
+    "pages/personal/after_sale/after_sale",
+    "pages/personal/complaint_advice/advice_add"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "欢迎进入微商城小程序",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f8f8f8"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#ff4800",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "微商城",
+        "iconPath": "pages/images/home.jpg",
+        "selectedIconPath": "pages/images/home.jpg"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "pages/images/tribe_icon02.png",
+        "selectedIconPath": "pages/images/tribe_icon02.png"
+      },
+      {
+        "pagePath": "pages/carts/carts",
+        "text": "购物车",
+        "iconPath": "pages/images/tribe_icon03.png",
+        "selectedIconPath": "pages/images/tribe_icon03.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "pages/images/tribe_icon05.png",
+        "selectedIconPath": "pages/images/tribe_icon05.png"
+      }
+    ]
+  }
+}

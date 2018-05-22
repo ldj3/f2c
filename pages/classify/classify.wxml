@@ -1,0 +1,21 @@
+<!-- 分类页 -->
+<view class='classify'>
+  <!-- 全部宝贝 -->
+  <view>
+    <navigator class='classify_more' url='/pages/goods/goods_search'>
+      <view class="classify_text"><text>全部宝贝</text></view>
+      <view class="classify_back"><image src="../images/next_icon.png"></image></view>
+    </navigator>
+  </view>
+
+  <!-- 分类产品 -->
+  <view>
+    <block wx:for='{{classify_head}}'>
+       <navigator class='classify_head' url='{{item.url}}'>
+        <view class="classify_text"><text>{{item.title}}</text></view>
+        <view class="classify_back"><image src="../images/next_icon.png"></image></view>
+       </navigator>
+    </block>
+  </view>
+
+</view>

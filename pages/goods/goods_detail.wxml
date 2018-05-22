@@ -1,0 +1,89 @@
+<!--pages/goods/goods_detail.wxml-->
+<!-- 商品详情页面 -->
+
+<scroll-view style="height: 100%;" scroll-y="true" scroll-top="{{scrollTop.scroll_top}}" bindscroll="scrollTopFun">
+
+<view class='goods_detail'>
+  <!-- 广告图 -->
+    <view class='swiper_img'>
+    <swiper indicator-dots="ture" autoplay="true" interval="3000" indicator-color="#822802" indicator-active-color="#ff4800">
+    <block wx:for="{{imgSwiper}}">
+      <navigator open-type='reLaunch' url='{{item.url}}' hover-class="none">
+       <swiper-item>
+        <image src="{{item.images}}"/>
+       </swiper-item>
+      </navigator>
+    </block>
+    </swiper>
+  </view>
+  <!-- 头部导航 -->
+  <view class='goods_nav'>
+    <view class='goods_nav_home'><navigator open-type='reLaunch' url='/pages/index/index' hover-class="none"><icon type="success_circle" size="30"/></navigator></view>
+    <view class='goods_nav_search'><navigator open-type='reLaunch' url='/pages/goods/goods_search' hover-class="none"><icon type="search" size="30"/></navigator></view>
+    <view class='goods_nav_personal'><navigator open-type='reLaunch' url='/pages/personal/personal' hover-class="none"><icon type="success_circle" size="30"/></navigator></view>
+  </view>
+ <!-- 商品详情内容 -->
+ <view class='goods_detail_box'>
+   <!-- 标题 -->
+   <view class='goods_box_title'><text>乐丝汀</text></view>
+   <!-- 价格 -->
+   <view class='goods_box_money'>
+     <view class='goods_box_money_num'><text>￥ {{price}}</text></view>
+     <view class='goods_box_money_text'>
+       <text>库存:300</text>
+       <text>全网销量:274</text>
+       <text>免运费</text>
+     </view>
+     <view class='goods_box_collect'>
+       <icon type="success_circle" size="20"/>
+       <text>收藏</text>
+     </view>
+   </view>
+   <!-- sku -->
+   <view class='goods_box_sku'>
+     <block wx:for='{{goods_box_sku}}'>
+       <view class='goods_box_sku_main'>
+        <view class='goods_box_sku_title'><text>{{item.title}}</text></view>
+        <view class='goods_box_sku_text'><text class='goods_box_sku_active'>{{item.text}}</text></view>
+       </view>
+     </block>
+   </view>
+   <!-- 商品总价:  -->
+   <view>
+     <view class='goods_box_totalprice'>商品总价: <text>￥{{totalPrice}}</text> </view>
+     <view class='goods_box_input'>
+            <input type="" disabled value='－' catchtap='minusCount' placeholder=""/>
+            <input type="" disabled catchtap='carts_goods_num' value='{{num}}' placeholder=""/>
+            <input type="" disabled value='＋' catchtap='addCount' placeholder=""/>
+        </view>
+   </view>
+
+ </view>
+  <!-- 简短描述 -->
+  <view class='goods_box_teletext'>
+    <text>美丽伊人</text>
+  </view>
+  <!-- 图文详情  -->
+  <view class='goods_box_teletext'>
+    <text>图文详情</text>  
+  </view>
+  <view class='goods_box_teletext_img'>
+      <image src='../images/goods01.jpg'></image>
+      <image src='../images/goods02.jpg'></image>
+  </view>
+  <!-- 客服 -->
+  <view class='customer_services'>
+    <icon type="success_circle" size="40"/>
+  </view>
+  <!-- 底部导航 -->
+  <view class='goods_detail_nav'>
+    <view><image src='../images/scrape.png'></image><text class='goods_num'>{{cartsNum}}</text></view>
+    <view><navigator url='/pages/pay/pay'>立即购买</navigator></view>
+    <view><text bindtap='joinCarts'>加入购物车</text></view>
+  </view>
+
+
+</view>
+</scroll-view>  
+  <!-- 回到顶部 --> 
+  <view class='go_top' wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun"><icon type="info" size="40"/></view>  

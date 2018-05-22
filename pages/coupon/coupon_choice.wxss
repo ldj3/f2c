@@ -1,0 +1,16 @@
+/* pages/coupon/coupon_choice.wxss */
+.coupon_choice_none {
+ text-align: center;
+}
+.coupon_choice_none image {
+  width: 180rpx;
+  height: 120rpx;
+  padding-top: 80rpx;
+}
+.coupon_choice_none text {
+  display: block;
+  text-align: center;
+  padding-top: 30rpx;
+  font-size: 30rpx;
+  color: #666;
+}

@@ -1,0 +1,14 @@
+/* pages/personal/integral.wxss */
+.integral {
+}
+.integral_num {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  background: #fff;
+  border-top: 2rpx solid #ddd;
+  border-bottom: 2rpx solid #ddd;
+}
+.integral_num text {
+  font-size: 30rpx;
+}

@@ -1,0 +1,13 @@
+<!--pages/personal/integral.wxml-->
+<view class='integral'>
+  <!-- 公共头部 -->
+  <!-- <view class="header">
+    <navigator open-type='navigateBack'><view class="header_back"><image src="../images/back_icon.png"></image></view></navigator>
+    <view class="header_text"><text>我的积分</text></view>
+    <view class='header_other'></view>
+  </view> -->
+  <view class='integral_num'>
+    <text>积分余额：</text><text>84</text>
+  </view>
+
+</view>

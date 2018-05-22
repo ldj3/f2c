@@ -1,0 +1,46 @@
+/* pages/personal/property/incarnate.wxss */
+page {
+  background: #f8f8f8;
+}
+.incarnate {}
+.incarnate_text {
+  text-align: center;
+  font-size: 24rpx;
+  padding-top: 30rpx;
+}
+.incarnate_money {
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  padding-top: 30rpx;
+}
+.incarnate_button {
+  padding: 0 20rpx;
+  padding-top: 30rpx;
+}
+.incarnate_button button {
+  display: block;
+  background: #44ba26;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 4rpx;
+  color: #fff;
+  font-size: 28rpx;
+}
+.incarnate_list {
+  margin-top: 40rpx;
+  background: #fff;
+}
+.incarnate_list view {
+  margin: 0 30rpx;
+  border-bottom: 2rpx solid #ddd;
+  line-height: 90rpx;
+}
+.incarnate_list view text {
+  font-size: 28rpx;
+  color: #666;
+}
+.incarnate_list view text:nth-child(2) {
+  float: right;
+}

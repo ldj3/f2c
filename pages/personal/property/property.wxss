@@ -1,0 +1,42 @@
+/* pages/personal/property/property.wxss */
+.property {
+}
+.property_head {
+  padding: 20rpx 0 40rpx 0;
+  text-align: center;
+  background: #ff4900;
+}
+.property_head view {
+  padding-top: 20rpx;
+  text-align: center;
+  overflow: hidden;
+}
+.property_head view text {
+  font-size: 30rpx;
+  color: #fff;
+}
+.property_head view:nth-child(1) text {
+  font-size: 36rpx;
+}
+.property_head view:nth-child(3) {
+  padding-top: 10rpx;
+}
+.property_list {
+  width: 100%;
+}
+.property_list navigator {
+  text-align: center;
+  background: #fff;
+  width: 49%;
+  margin-top: 15rpx;
+  display: inline-block;
+  padding: 5rpx 0 25rpx 0;
+}
+.property_list navigator:nth-child(2n) {
+  margin-left: 2%;
+}
+.property_list navigator text {
+  display: block;
+  font-size: 30rpx;
+  padding-top: 20rpx;
+}

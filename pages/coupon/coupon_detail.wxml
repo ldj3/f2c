@@ -1,0 +1,25 @@
+<!--pages/coupon/coupon_detail.wxml-->
+<view class='coupon_detail'>
+
+  <view class='coupon_detail_box'>
+    <view class='coupon_detail_text01'>
+      <text>优惠券类型:</text>
+      <text>9.9折优惠券</text>
+      <text>使用说明:</text>
+    </view>
+    <view class='coupon_detail_text02'>
+      <text>使用条件：限定购买100元以上的商品</text>
+      <text>有效期间：2017-03-01 至 2017-03-10</text>
+      <text>详细说明：</text>
+    </view>
+  
+  
+  </view>
+
+  <navigator url='/pages/index/index' open-type='reLaunch' hover-class='none' class='coupon_shopping'>马上逛逛</navigator>
+
+
+
+
+
+</view>

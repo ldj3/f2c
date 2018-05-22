@@ -1,0 +1,54 @@
+<!--pages/personal/after_sale/after_sale_detail.wxml-->
+<view class='after_sale_detail'>
+  <!-- 提示 -->
+  <view class='tishi'>
+    <text>提示:</text>
+    <text>如对订单有任何疑问或牵扯到退换货问题可拨打客服电话</text>
+    <navigator>电话咨询</navigator>
+  </view>
+  <!-- 商品 -->
+  <view class='after_sale_list'>
+    <navigator hover-class='none'>
+      <view><image src='../../images/download-1.jpg'></image></view>  
+      <view>
+        <text>玫瑰花玫瑰花🌹</text>
+        <text>x1</text>
+      </view>  
+    </navigator>
+  </view>
+  <!-- 售后信息 -->
+  <view class="after_sale_text">
+    <view>售后信息</view>
+    <view>防伪码：<text>00005721</text></view>
+    <view>售后申请日期：<text>2017-08-08</text></view>
+    <view>最近操作时间：<text>2017-08-08</text></view>
+    <view>保修期至：<text>2017-11-27 19:28:01</text></view>
+  </view>
+  <!-- 发货详情 -->
+  <view class="after_sale_text">
+    <view>发货详情</view>
+    <view>快递公司：<text>天天快递</text></view>
+    <view>物流单号<text>1008611</text></view>
+  </view>
+  <!-- 收货详情 -->
+  <view class="after_sale_text">
+    <view>收货详情</view>
+    <view>快递公司：<text>天天快递</text></view>
+    <view>物流单号<text>1008611</text></view>
+  </view>
+  <!-- 售后类型 -->
+  <view class='after_sale_type'>
+   <text>售后类型：退货换货</text>
+   <navigator>售后完成</navigator>
+  </view>
+  <!-- 售后说明 -->
+  <view class='after_sale_explain'>
+   <text>售后说明</text>
+   <text>1、售后码暂不支持退款，如需退款，请联系原购买商家，如有任何疑问，请随时联系我们，谢谢！</text>
+   <text>2、平台退换地址为：广州市海珠区xx街道xx路xx小区xx号</text>
+  </view>
+
+
+
+
+</view>

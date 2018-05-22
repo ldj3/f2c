@@ -1,0 +1,163 @@
+/* pages/order/my_order.wxss */
+.my_order {
+}
+.swiper-tab{  
+  width: 100%;  
+  border-bottom: 2rpx solid #ddd;  
+  text-align: center;  
+  line-height: 80rpx;
+  display: flex;
+  flex-direction:row;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background: #f8f8f8;
+}  
+.my_order_list {
+  margin-top: 100rpx;
+  height: 100%;
+  overflow-y: scroll;
+}
+.swiper-tab-list{  
+  font-size: 30rpx;  
+  display: inline-block;  
+  flex:1;
+  flex-grow:1;
+  text-align: center;
+}  
+.on{ 
+  /* color: #da7c0c;   */
+  border-bottom: 3rpx solid #fec56b;
+}  
+.swiper-box{ 
+  display: block; 
+  height: 100%; 
+  width: 100%; 
+  overflow: scroll;
+} 
+
+.order_box {
+  margin-bottom: 15rpx;
+  background: #fff;
+  height: 445rpx;
+}
+.order_box_head {
+  padding: 20rpx 30rpx;
+  display: flex;
+  flex-direction:row;
+  overflow: hidden;
+  text-align: center;
+
+}
+.order_box_head text {
+  font-size: 26rpx;
+  display: inline-block;
+  flex:1;
+  flex-grow:1;
+}
+.order_box_head text:nth-child(1) {
+  text-align: left;
+}
+.order_box_head text:nth-child(2) {
+  text-align: right;
+}
+.order_box_good {
+  position: relative;
+  background: #f8f8f8;
+  padding: 15rpx 20rpx 15rpx 15rpx;
+}
+.order_box_good navigator:nth-child(1) {
+  display: flex;
+  flex-direction:row;
+  overflow: hidden;
+  width: 100%;
+}
+.order_good_img {
+  display: inline-block;
+  width: 23%;
+  height: 160rpx;
+  overflow: hidden;
+}
+.order_good_img image {
+  width: 100%;
+  height: 100%;
+}
+.order_good_title {
+  padding-left: 10rpx;
+  width: 60%;
+  
+}
+.order_good_title text:nth-child(1) {
+  display: block;
+  font-size: 26rpx;
+  height: 70rpx;
+  line-height: 35rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  padding-top: 10rpx;
+}
+.order_good_title text:nth-child(2) {
+  display: block;
+  font-size: 26rpx;
+  color: #ccc;
+  padding-top: 10rpx;
+}
+.order_good_money {
+  display: inline-block;
+  width: 17%;
+  text-align: right;
+}
+.order_good_money text:nth-child(1) {
+  font-size: 26rpx;
+  color: #f1544b;
+  display: block;
+}
+.order_good_money text:nth-child(2) {
+  font-size: 26rpx;
+  color: #ccc;
+  display: block;
+}
+.apply_for {
+  position: absolute;
+  right: 20rpx;
+  bottom: 10rpx;
+  font-size: 26rpx;
+}
+.order_text01 {
+  display: flex;
+  flex-direction:row;
+  overflow: hidden;
+  padding: 20rpx 20rpx;
+  border-bottom: 1px solid #ddd;
+}
+.order_text01 view {
+  display: inline-block;
+  flex:1;
+  flex-grow:1;
+}
+.order_text01 view text {
+  font-size: 26rpx;
+  color: #666;
+  padding-left: 10rpx;
+}
+.order_text01 view:nth-child(2) {
+  text-align: right;
+}
+.order_text02 {
+  text-align: right;
+  padding: 15rpx 0;
+}
+.order_text02 navigator {
+  display: inline-block;
+  padding: 6rpx 15rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border: 1px solid #ddd;
+  border-radius: 30rpx;
+  margin-right: 20rpx;
+}
