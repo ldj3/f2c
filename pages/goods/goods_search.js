@@ -21,6 +21,24 @@ Page({
         id: 3,
       },
     ],
+    tabList: [
+      {
+        name: '微商城',
+        id: 1,
+      },
+      {
+        name: '分类',
+        id: 2,
+      },
+      {
+        name: '购物车',
+        id: 3,
+      },
+      {
+        name: '个人中心',
+        id: 4,
+      },
+    ],
     goodsList:[
       {
         'url': '/pages/goods/goods_detail',

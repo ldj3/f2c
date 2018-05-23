@@ -34,5 +34,12 @@
 </view>
 
 
+<view class='tab_search_nav'>
+  <block wx:for="{{tabList}}" wx:key='key' url='pages/index/index'>
+		<view class="" bindtap="selectNav" url='pages/index/index' data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+	</block>
+</view>
+
+
 
 

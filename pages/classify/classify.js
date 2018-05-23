@@ -5,114 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    classify_head:[
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '手机/笔记本'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '安卓耳机'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '苹果耳机'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '苹果'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '魅族'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '华为'
-      },
-
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '通话耳机'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '衬衫'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '牛仔外套'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '裙子'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '杯子/桌椅凳'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '玫瑰花'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '薰衣草'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '金钱树'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': 'iPhone'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '所有笔记本'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '头戴式苹果耳机'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': 'test111'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '分类2233'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'title': '钢笔'
-      },
-    ],
-    classify_list:[
-      {
-        'url': '/pages/goods/goods_search',
-        'text': '不限'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'text': '苹果'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'text': '魅族'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'text': '华为'
-      },
-      {
-        'url': '/pages/goods/goods_search',
-        'text': '所有笔记本'
-      },
-
-
-    ]
-  
+    items:[]
   },
 
   // 返回上个页面
@@ -125,6 +18,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getdata();
    
   },
   /**
@@ -174,5 +68,29 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+
+  /**
+   * 获取分类
+   */
+  getdata: function () {//定义函数名称
+    var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess直接写this就变成了wx.request()的this了
+    wx.request({
+      url: 'http://mall.yzidea.net/index.php/xcxapi/home/category',//请求地址
+      header: {//请求头
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",//get为默认方法/POST
+      success: function (res) {
+        that.setData({
+          items:res.data
+        })
+      },
+      fail: function (err) { },//请求失败
+      complete: function () { }//请求完成后执行的函数
+    })
+  },
+  
+
+
 })

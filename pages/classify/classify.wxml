@@ -10,12 +10,17 @@
 
   <!-- 分类产品 -->
   <view>
-    <block wx:for='{{classify_head}}'>
-       <navigator class='classify_head' url='{{item.url}}'>
-        <view class="classify_text"><text>{{item.title}}</text></view>
+    <block wx:for='{{items}}'>
+       <navigator class='classify_head' url='/pages/goods/goods_search'>
+        <view class="classify_text"><text>{{item.section_name}}</text></view>
         <view class="classify_back"><image src="../images/next_icon.png"></image></view>
        </navigator>
     </block>
   </view>
 
+  <view>
+    <view class='class_head'>
+      <view class="class_text"><text>©复购网版权所有 复购物联提供技术支持</text></view>
+    </view>
+  </view>
 </view>

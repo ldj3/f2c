@@ -76,3 +76,28 @@
   text-align: left;
   padding: 0 20rpx;
 }
+.class_head {
+  border-bottom: 2rpx solid #ddd;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  height: 120rpx;
+  background: #fff;
+  text-align: center;
+  padding: 0 20rpx;
+}
+.class_text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #a9a9a9;
+  font-size: 22rpx;
+  overflow: hidden;
+  justify-content: center;
+}
+.class_text text {
+  overflow: hidden;
+  word-break:keep-all;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}

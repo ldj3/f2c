@@ -60,8 +60,8 @@
       {
         "pagePath": "pages/classify/classify",
         "text": "分类",
-        "iconPath": "pages/images/tribe_icon02.png",
-        "selectedIconPath": "pages/images/tribe_icon02.png"
+        "iconPath": "pages/images/icon_component_HL.png",
+        "selectedIconPath": "pages/images/icon_component_HL.png"
       },
       {
         "pagePath": "pages/carts/carts",
