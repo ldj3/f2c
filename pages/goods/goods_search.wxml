@@ -16,14 +16,15 @@
 		</block>
    <view><navigator open-type="redirect" url='/pages/index/index' hover-class='none'>筛选</navigator></view>
   </view>
+
   <!-- 商品列表 -->
   <view class='goods_list'>
-     <block wx:for='{{goodsList}}' wx:key='key'>
+     <block wx:for='{{products}}' wx:key='key'>
        <navigator open-type="redirect" url='{{item.url}}'>
-         <view class='goods_list_img'><image src='{{item.src}}'></image></view>
+         <view class='goods_list_img'><image src="http://mall.yzidea.net/{{item.goods_thumb}}" mode="aspectFill"></image></view>
          <view class='goods_list_box'>
-            <text class='goods_list_title'>{{item.title}}</text>
-            <text class='goods_list_money'>¥{{item.money}}</text>
+            <text class='goods_list_title'>{{item.name}}</text>
+            <text class='goods_list_money'>¥{{item.price}}</text>
          </view>
       </navigator>
      </block>
@@ -35,8 +36,11 @@
 
 
 <view class='tab_search_nav'>
-  <block wx:for="{{tabList}}" wx:key='key' url='pages/index/index'>
-		<view class="" bindtap="selectNav" url='pages/index/index' data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+  <block wx:for="{{tabList}}" wx:key='key'>
+    <navigator open-type="switchTab" url='{{item.taburl}}' >
+      <view class="classify_back"><image src="{{item.image_url}}"></image></view>
+      <text>{{item.name}}</text>
+    </navigator>
 	</block>
 </view>
 

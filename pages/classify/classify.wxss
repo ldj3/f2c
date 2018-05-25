@@ -15,6 +15,10 @@
   border-top: 20rpx solid #f8f8f8;
   border-bottom: 20rpx solid #f8f8f8;
 }
+.classify_more icon {
+  justify-content: center;
+  display: block;
+}
 .classify_text {
   display: flex;
   align-items: center;
@@ -41,6 +45,10 @@
   
 }
 .classify_back image {
+  width: 20rpx;
+  height: 40rpx;
+}
+.classify_back icon {
   width: 20rpx;
   height: 40rpx;
 }
@@ -101,3 +109,5 @@
   white-space:nowrap;
   text-overflow:ellipsis;
 }
+
+.icon-left:after { content: "\e623"; }

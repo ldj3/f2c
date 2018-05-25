@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    products:[],
     searchValue: '',
     curNav: 1,
     navList:[
@@ -25,44 +26,26 @@ Page({
       {
         name: '微商城',
         id: 1,
+        image_url: '/pages/images/home.jpg',
+        taburl:'/pages/index/index'
       },
       {
         name: '分类',
         id: 2,
+        image_url: '/pages/images/icon_component.png',
+        taburl: '/pages/classify/classify'
       },
       {
         name: '购物车',
         id: 3,
+        image_url: '/pages/images/tribe_icon03.png',
+        taburl: '/pages/carts/carts'
       },
       {
         name: '个人中心',
         id: 4,
-      },
-    ],
-    goodsList:[
-      {
-        'url': '/pages/goods/goods_detail',
-        'src': '../images/download-2.jpg',
-        'title': '国画',
-        'money': '198.00',
-      },
-      {
-        'url': '/pages/goods/goods_detail',
-        'src': '../images/download-1.jpg',
-        'title': '玫瑰花',
-        'money': '98.00',
-      },
-      {
-        'url': '/pages/goods/goods_detail',
-        'src': '../images/download.jpg',
-        'title': '衣服',
-        'money': '298.00',
-      },
-      {
-        'url': '/pages/goods/goods_detail',
-        'src': '../images/download-3.jpg',
-        'title': '茶杯',
-        'money': '28.00',
+        image_url: '/pages/images/tribe_icon05.png',
+        taburl: '/pages/personal/personal'
       },
     ]
   },
@@ -85,6 +68,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getdata();
   
   },
 
@@ -120,14 +104,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    console.log("下拉");  
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+    this.getalldata();
   },
 
   /**
@@ -135,5 +119,60 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  /**
+   * 获取分类
+   */
+  getdata: function () {//定义函数名称
+    var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess直接写this就变成了wx.request()的this了
+    wx.request({
+      url: 'http://mall.yzidea.net/index.php/xcxapi/product/all_product',//请求地址
+      header: {//请求头
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",//get为默认方法/POST
+      success: function (res) {
+        that.setData({
+          products: res.data
+        })
+      },
+      fail: function (err) { },//请求失败
+      complete: function () { }//请求完成后执行的函数
+    })
+  },
+  
+  /**
+   * 获取分类
+   */
+  getalldata: function () {
+    var p = 0;
+    var that = this;
+    var offset = p * 20;
+    var limit = (p+1) * 20;
+    var url = 'http://mall.yzidea.net/index.php/xcxapi/product/ajax_get_product_data?p_name=&price_sort=&sales=&cat_id=&max_price=0&min_price=0&section=0&offset='+offset+'&limit='+limit;
+    console.log(url);
+    wx.request({
+      url: url,
+      header: {
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",
+      success: function (res) {
+        //获取data里的值
+        var products = that.data.products;
+        for (var i = 0; i < res.data.length; i++) {
+          products.push(res.data[i])
+        }
+        that.setData({
+          products: products
+        });
+        p = p+1;
+      },
+      fail: function (err) { },
+      complete: function () { }
+    })
   }
+
+
 })
