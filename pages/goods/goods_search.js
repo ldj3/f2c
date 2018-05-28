@@ -1,3 +1,45 @@
+var p = 0;
+var getalldata = function (that) {
+  var offset = p * 20;
+  var limit = 20;
+  var url = 'http://mall.yzidea.net/index.php/xcxapi/product/ajax_get_product_data?p_name=&price_sort=&sales=&cat_id=&max_price=0&min_price=0&section=0&offset=' + offset + '&limit=' + limit;
+  wx.request({
+    url: url,
+    header: {
+      "Content-Type": "applciation/json"
+    },
+    method: "GET",
+    success: function (res) {
+      console.log(res);
+      if (res.data.length < 1) {
+        that.setData({
+          hidden: false
+        })
+      }else{
+        //获取data里的值
+        var products = that.data.products;
+        for (var i = 0; i < res.data.length; i++) {
+          products.push(res.data[i])
+        }
+        that.setData({
+          products: products
+        });
+        p++;
+        that.setData({
+          hidden: true
+        });
+      }
+      
+    },
+    fail: function (err) { },
+    complete: function () { }
+  })
+} 
+
+var cancelp = function (that) {
+  p = 0;
+}
+
 // pages/goods/goods_search.js
 Page({
 
@@ -5,6 +47,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    hidden: true,
     products:[],
     searchValue: '',
     curNav: 1,
@@ -76,7 +119,8 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    var that = this;
+    cancelp(that);
   },
 
   /**
@@ -97,7 +141,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+    var p = 0;
   },
 
   /**
@@ -111,7 +155,8 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.getalldata();
+    var that = this;
+    getalldata(that);
   },
 
   /**
@@ -133,6 +178,16 @@ Page({
       },
       method: "GET",//get为默认方法/POST
       success: function (res) {
+        if (res.data.length < 6) {
+          that.setData({
+            hidden: false
+          })
+        }else {
+          that.setData({
+            hidden: true
+          })
+        }
+
         that.setData({
           products: res.data
         })
@@ -141,38 +196,10 @@ Page({
       complete: function () { }//请求完成后执行的函数
     })
   },
+
   
-  /**
-   * 获取分类
-   */
-  getalldata: function () {
-    var p = 0;
-    var that = this;
-    var offset = p * 20;
-    var limit = (p+1) * 20;
-    var url = 'http://mall.yzidea.net/index.php/xcxapi/product/ajax_get_product_data?p_name=&price_sort=&sales=&cat_id=&max_price=0&min_price=0&section=0&offset='+offset+'&limit='+limit;
-    console.log(url);
-    wx.request({
-      url: url,
-      header: {
-        "Content-Type": "applciation/json"
-      },
-      method: "GET",
-      success: function (res) {
-        //获取data里的值
-        var products = that.data.products;
-        for (var i = 0; i < res.data.length; i++) {
-          products.push(res.data[i])
-        }
-        that.setData({
-          products: products
-        });
-        p = p+1;
-      },
-      fail: function (err) { },
-      complete: function () { }
-    })
-  }
+  
+  
 
 
 })

@@ -107,10 +107,22 @@
   margin-top: 30rpx;
 }
 .loading_over {
-  margin-top: 40rpx;
+  vertical-align: inherit;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
   text-align: center;
-  color: #999999;
   font-size: 30rpx;
+  width: 100%;
+  color: #999999;
+}
+.loading_footer {
+  vertical-align: inherit;
+  margin-top: 20rpx;
+  margin-bottom: 120rpx;
+  text-align: center;
+  font-size: 24rpx;
+  width: 100%;
+  color: #a9a9a9;
 }
 .tab_search_nav {
   background: #fff;

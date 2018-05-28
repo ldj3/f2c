@@ -30,7 +30,8 @@
      </block>
   </view>
   <!-- 已加载全部商品 -->
-  <view class='loading_over'><text>已加载全部商品</text></view>
+  <view class='loading_over' hidden="{{hidden}}"><text>已加载全部商品</text></view>
+  <view class='loading_footer' hidden="{{hidden}}"><text>©复购网版权所有复购物联提供技术支持</text></view>
 
 </view>
 
