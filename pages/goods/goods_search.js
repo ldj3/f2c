@@ -10,8 +10,7 @@ var getalldata = function (that) {
     },
     method: "GET",
     success: function (res) {
-      console.log(res);
-      if (res.data.length < 1) {
+      if (res.data.title) {
         that.setData({
           hidden: false
         })
@@ -25,9 +24,15 @@ var getalldata = function (that) {
           products: products
         });
         p++;
-        that.setData({
-          hidden: true
-        });
+        if (res.data.length <20) {
+          that.setData({
+            hidden: false
+          })
+        }else{
+          that.setData({
+            hidden: true
+          })
+        }
       }
       
     },
@@ -55,14 +60,20 @@ Page({
       {
         name: '全部',
         id: 1,
+        icon : '',
+        click : '',
       },
       {
         name: '销量',
         id: 2,
+        icon: 'icon-arrowdown',
+        click: 0,
       },
       {
         name: '价格',
         id: 3,
+        icon: 'icon-arrowdown',
+        click: 0,
       },
     ],
     tabList: [
@@ -101,10 +112,34 @@ Page({
   // 点击导航
   selectNav:function(event) {
     let id = event.target.dataset.id,
+    
     index = parseInt(event.target.dataset.index);
+    var click = event.target.dataset.click;
+
+    console.log('id=:' + id);
+    console.log('index=:' + index);
+    console.log('click=:' + click);
+
+    var click_data = 'navList[' + id + '].click';
+    var icon_data = 'navList[' + id + '].icon';
+    console.log('click_data=:' + click_data);
+    console.log('icon_data=:' + icon_data);
+    
+    if (click = '0'){
+      this.setData({
+        [click_data]: 1,
+        [icon_data]: 'icon-arrowup',
+      })
+    }else{
+      this.setData({
+        [click_data]: 0,
+        [icon_data]: 'icon-arrowdown',
+      })
+    }
     this.setData({
       curNav: id,
     })
+    // console.log(click);
   },
 
   /**

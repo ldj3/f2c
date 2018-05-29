@@ -1,3 +1,4 @@
+ @import "/lib/style/icon.wxss";
 /* pages/goods/goods_search.wxss */
 .goods_search {
 }

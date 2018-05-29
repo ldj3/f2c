@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    hidden: true,
     items:[]
   },
 
@@ -84,6 +85,9 @@ Page({
       success: function (res) {
         that.setData({
           items:res.data
+        });
+        that.setData({
+          hidden: false
         })
       },
       fail: function (err) { },//请求失败

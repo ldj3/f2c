@@ -12,7 +12,10 @@
   <!-- 导航 -->
   <view class='goods_search_nav'>
     <block wx:for="{{navList}}" wx:key='key'>
-			<view class="{{curNav == item.id ? 'selected' : ''}}" bindtap="selectNav" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+			<view class="{{curNav == item.id ? 'selected' : ''}}" bindtap="selectNav" data-click='{{item.click}}' data-index="{{index}}" data-id="{{item.id}}">
+      {{item.name}}
+      <view class='iconfont {{item.icon}}'></view>
+      </view>
 		</block>
    <view><navigator open-type="redirect" url='/pages/index/index' hover-class='none'>筛选</navigator></view>
   </view>
