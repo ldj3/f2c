@@ -1,8 +1,51 @@
+/** 下拉刷新获取数据 */
 var p = 0;
 var getalldata = function (that) {
+  
+  // console.log(that.data.section)
+  switch (that.data.curNav) {
+    case 1:
+      var p_name = '';
+      var price_sort = '';
+      var sales = '';
+      var cat_id = '';
+      var section = that.data.section;
+      break;
+    case 2:
+      var p_name = '';
+      var price_sort = '';
+      var cat_id = '';
+      var section = that.data.section;
+      switch (that.data.navList[1].click) {
+        case 0:
+          var sales = 'DESC';
+          break;
+        case 1:
+          var sales = 'ASC';
+          break
+      }
+      break;
+    case 3:
+      var p_name = '';
+      var price_sort = '';
+      var cat_id = '';
+      var sales = '';
+      var section = that.data.section;
+      switch (that.data.navList[2].click) {
+        case 0:
+          var price_sort = 'DESC';
+          break;
+        case 1:
+          var price_sort = 'ASC';
+          break
+      }
+      break;
+  }
+
   var offset = p * 20;
   var limit = 20;
-  var url = 'http://mall.yzidea.net/index.php/xcxapi/product/ajax_get_product_data?p_name=&price_sort=&sales=&cat_id=&max_price=0&min_price=0&section=0&offset=' + offset + '&limit=' + limit;
+  var url = 'http://mall.yzidea.net/index.php/xcxapi/product/ajax_get_product_data?p_name=' + p_name + '&price_sort=' + price_sort + '&sales=' + sales + '&cat_id=' + cat_id + '&max_price=0&min_price=0&section=' + section +'&offset=' + offset + '&limit=' + limit;
+  console.log(url);
   wx.request({
     url: url,
     header: {
@@ -41,8 +84,14 @@ var getalldata = function (that) {
   })
 } 
 
+/** 返回上一页，重置变量p的值 */
 var cancelp = function (that) {
   p = 0;
+}
+
+var pp = function (that,click) {
+  
+  console.log(click)
 }
 
 // pages/goods/goods_search.js
@@ -52,6 +101,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    section:'',
     hidden: true,
     products:[],
     searchValue: '',
@@ -112,41 +162,74 @@ Page({
   // 点击导航
   selectNav:function(event) {
     let id = event.target.dataset.id,
-    
     index = parseInt(event.target.dataset.index);
     var click = event.target.dataset.click;
+    var click_data = 'navList['+index+'].click';
+    var icon_data = 'navList['+index+'].icon';
+    var section = this.data.section;
+    //重置p为0
+    p = 0;
+    switch (id) {
+      case 1:
+        this.getdata('', '', '', '', '', '', '', section);
+        break;
+      case 2:
+        switch (click) {
+          case 0:
+            this.setData({
+              [click_data]: 1,
+              [icon_data]: 'icon-arrowup',
+              'navList[2].icon': 'icon-arrowdown'
+            })
+            this.getdata('', '', 'ASC', '', '', '', '', section);
+            break;
+          case 1:
+            this.setData({
+              [click_data]: 0,
+              [icon_data]: 'icon-arrowdown',
+              'navList[2].icon': 'icon-arrowdown'
+            })
+            this.getdata('', '', 'DESC', '', '', '', '', section);
+            break;
+        }
+        break;
+      case 3:
+        switch (click) {
+          case 0:
+            this.setData({
+              [click_data]: 1,
+              [icon_data]: 'icon-arrowup',
+              'navList[1].icon': 'icon-arrowdown'
 
-    console.log('id=:' + id);
-    console.log('index=:' + index);
-    console.log('click=:' + click);
-
-    var click_data = 'navList[' + id + '].click';
-    var icon_data = 'navList[' + id + '].icon';
-    console.log('click_data=:' + click_data);
-    console.log('icon_data=:' + icon_data);
-    
-    if (click = '0'){
-      this.setData({
-        [click_data]: 1,
-        [icon_data]: 'icon-arrowup',
-      })
-    }else{
-      this.setData({
-        [click_data]: 0,
-        [icon_data]: 'icon-arrowdown',
-      })
+            })
+            this.getdata('', 'ASC', '', '', '', '', '', section);
+            break;
+          case 1:
+            this.setData({
+              [click_data]: 0,
+              [icon_data]: 'icon-arrowdown',
+              'navList[1].icon': 'icon-arrowdown'
+            })
+            this.getdata('', 'DESC', '', '', '', '', '', section);
+            break;
+        }
+        break;
     }
     this.setData({
       curNav: id,
     })
-    // console.log(click);
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getdata();
+    // console.log(options.section)
+    this.setData({
+      section:options.section
+    })
+
+    this.getdata('','','','','','','',options.section);
   
   },
 
@@ -204,10 +287,10 @@ Page({
   /**
    * 获取分类
    */
-  getdata: function () {//定义函数名称
+  getdata: function (p_name, price_sort, sales, cat_id, max_price, min_price, is_screen, section) {//定义函数名称
     var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess直接写this就变成了wx.request()的this了
     wx.request({
-      url: 'http://mall.yzidea.net/index.php/xcxapi/product/all_product',//请求地址
+      url: 'http://mall.yzidea.net/index.php/xcxapi/product/all_product?p_name='+p_name+'&price_sort='+price_sort+'&sales='+sales+'&cat_id='+cat_id+'&max_price='+max_price+'&min_price='+min_price+'&is_screen='+is_screen+'&section='+section,//请求地址
       header: {//请求头
         "Content-Type": "applciation/json"
       },

@@ -11,7 +11,7 @@
   <!-- 分类产品 -->
   <view>
     <block wx:for='{{items}}'>
-       <navigator class='classify_head' url='/pages/goods/goods_search'>
+       <navigator class='classify_head' url='/pages/goods/goods_search?section={{item.id}}'>
         <view class="classify_text"><text>{{item.section_name}}</text></view>
         <view class="classify_back"><image src="../images/next_icon.png"></image></view>
        </navigator>
