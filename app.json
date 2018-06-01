@@ -24,6 +24,7 @@
     "pages/goods/goods_search",
     "pages/carts/carts",
     "pages/goods/goods_detail",
+    "pages/goods/goods_pick",
     "pages/address/address_add",
     "pages/address/address",
     "pages/pay/pay",

@@ -18,27 +18,37 @@
   </view>
   <!-- 头部导航 -->
   <view class='goods_nav'>
-    <view class='goods_nav_home'><navigator open-type='reLaunch' url='/pages/index/index' hover-class="none"><icon type="success_circle" size="30"/></navigator></view>
-    <view class='goods_nav_search'><navigator open-type='reLaunch' url='/pages/goods/goods_search' hover-class="none"><icon type="search" size="30"/></navigator></view>
-    <view class='goods_nav_personal'><navigator open-type='reLaunch' url='/pages/personal/personal' hover-class="none"><icon type="success_circle" size="30"/></navigator></view>
+    <view class='goods_nav_home'><navigator open-type='reLaunch' url='/pages/index/index' hover-class="none">
+    <view class='iconfont icon-qunfengshouye'></view>
+    </navigator></view>
+    <view class='goods_nav_search'><navigator open-type='reLaunch' url='/pages/goods/goods_search' hover-class="none">
+    <view class='iconfont icon-sousuo-tianchong'></view>
+    </navigator></view>
+    <view class='goods_nav_personal'><navigator open-type='reLaunch' url='/pages/personal/personal' hover-class="none">
+    <view class='iconfont icon-gerenzhongxin'></view>
+    </navigator></view>
   </view>
  <!-- 商品详情内容 -->
  <view class='goods_detail_box'>
    <!-- 标题 -->
-   <view class='goods_box_title'><text>乐丝汀</text></view>
+   <!-- details -->
+   <view class='goods_box_title'><text>{{details.name}}</text></view>
    <!-- 价格 -->
    <view class='goods_box_money'>
-     <view class='goods_box_money_num'><text>￥ {{price}}</text></view>
+     <view class='goods_box_money_num'><text>￥ {{details.price}}</text></view>
      <view class='goods_box_money_text'>
-       <text>库存:300</text>
-       <text>全网销量:274</text>
-       <text>免运费</text>
+       <text>库存:{{details.stock}}</text>
+       <text>全网销量:{{details.sales_volume}}</text>
+       <text wx:if="{{details.limit_quantity > 0}}"> 限购:{{details.limit_quantity}} </text>
+       <text wx:if="{{details.freight > 0}}"> 运费:{{details.freight}}元 </text>
+       <text wx:else> 免运费 </text>
      </view>
      <view class='goods_box_collect'>
        <icon type="success_circle" size="20"/>
        <text>收藏</text>
      </view>
    </view>
+
    <!-- sku -->
    <view class='goods_box_sku'>
      <block wx:for='{{goods_box_sku}}'>
@@ -59,6 +69,8 @@
    </view>
 
  </view>
+
+
   <!-- 简短描述 -->
   <view class='goods_box_teletext'>
     <text>美丽伊人</text>
@@ -73,7 +85,7 @@
   </view>
   <!-- 客服 -->
   <view class='customer_services'>
-    <icon type="success_circle" size="40"/>
+    <view class='iconfont icon-weixin-copy'></view>
   </view>
   <!-- 底部导航 -->
   <view class='goods_detail_nav'>
@@ -86,4 +98,6 @@
 </view>
 </scroll-view>  
   <!-- 回到顶部 --> 
-  <view class='go_top' wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun"><icon type="info" size="40"/></view>  
+  <view class='go_top' wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun">
+  <view class='iconfont icon-xiangshangyuanjiantou'></view>
+  </view>  

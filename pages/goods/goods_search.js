@@ -1,18 +1,16 @@
 /** 下拉刷新获取数据 */
 var p = 0;
 var getalldata = function (that) {
-  
-  // console.log(that.data.section)
   switch (that.data.curNav) {
     case 1:
-      var p_name = '';
+      var p_name = that.data.searchValue;
       var price_sort = '';
       var sales = '';
       var cat_id = '';
       var section = that.data.section;
       break;
     case 2:
-      var p_name = '';
+      var p_name = that.data.searchValue;
       var price_sort = '';
       var cat_id = '';
       var section = that.data.section;
@@ -26,7 +24,7 @@ var getalldata = function (that) {
       }
       break;
     case 3:
-      var p_name = '';
+      var p_name = that.data.searchValue;
       var price_sort = '';
       var cat_id = '';
       var sales = '';
@@ -159,6 +157,20 @@ Page({
       searchValue: ''
     })
   },
+
+  // 获取搜索框的值
+  inputvalue: function (e) {
+    this.data.searchValue = e.detail.value;  
+  },
+
+  //搜索
+  search: function () {
+    var searchValue = this.data.searchValue;
+    var section = this.data.section;
+    this.getdata(searchValue, '', '', '', '', '', '', section);
+    console.log(searchValue);
+  },
+
   // 点击导航
   selectNav:function(event) {
     let id = event.target.dataset.id,
@@ -167,11 +179,12 @@ Page({
     var click_data = 'navList['+index+'].click';
     var icon_data = 'navList['+index+'].icon';
     var section = this.data.section;
+    var searchValue = this.data.searchValue;
     //重置p为0
     p = 0;
     switch (id) {
       case 1:
-        this.getdata('', '', '', '', '', '', '', section);
+        this.getdata(searchValue, '', '', '', '', '', '', section);
         break;
       case 2:
         switch (click) {
@@ -181,7 +194,7 @@ Page({
               [icon_data]: 'icon-arrowup',
               'navList[2].icon': 'icon-arrowdown'
             })
-            this.getdata('', '', 'ASC', '', '', '', '', section);
+            this.getdata(searchValue, '', 'ASC', '', '', '', '', section);
             break;
           case 1:
             this.setData({
@@ -189,7 +202,7 @@ Page({
               [icon_data]: 'icon-arrowdown',
               'navList[2].icon': 'icon-arrowdown'
             })
-            this.getdata('', '', 'DESC', '', '', '', '', section);
+            this.getdata(searchValue, '', 'DESC', '', '', '', '', section);
             break;
         }
         break;
@@ -202,7 +215,7 @@ Page({
               'navList[1].icon': 'icon-arrowdown'
 
             })
-            this.getdata('', 'ASC', '', '', '', '', '', section);
+            this.getdata(searchValue, 'ASC', '', '', '', '', '', section);
             break;
           case 1:
             this.setData({
@@ -210,7 +223,7 @@ Page({
               [icon_data]: 'icon-arrowdown',
               'navList[1].icon': 'icon-arrowdown'
             })
-            this.getdata('', 'DESC', '', '', '', '', '', section);
+            this.getdata(searchValue, 'DESC', '', '', '', '', '', section);
             break;
         }
         break;

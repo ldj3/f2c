@@ -114,6 +114,26 @@ page {
 
 .icon-shouye:before { content: "\e612"; }
 
+.icon-cart:before { content: "\e698"; }
+
+.icon-qunfengshouye:before { content: "\e7a7"; }
+
+.icon-xiazai44:before { content: "\e619"; }
+
+.icon-xiangshangyuanjiantou:before { content: "\e624"; }
+
+.icon-weixin-copy:before { content: "\e652"; }
+
+.icon-sousuo-tianchong:before { content: "\e61e"; }
+
+.icon-shouye:before { content: "\e6d9"; }
+
+.icon-gouwuche:before { content: "\e64e"; }
+
+.icon-gerenzhongxin:before { content: "\e606"; }
+
+.icon-sousuo:before { content: "\e63c"; }
+
 .icon-arrowup:before { content: "\e722"; }
 
 .icon-arrowdown:before { content: "\e723"; }

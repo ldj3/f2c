@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    //商品ID
+    product_id : '',
+    details : '',
     cartsNum: 0,
     test: "",
     scrollTop: {
@@ -130,7 +133,10 @@ scrollTopFun: function(e){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      product_id: options.id
+    })
+    this.getdata(options.id);
   },
 
   /**
@@ -158,7 +164,6 @@ scrollTopFun: function(e){
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
   },
 
   /**
@@ -180,5 +185,35 @@ scrollTopFun: function(e){
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  /**
+   * 获取商品详情信息
+   */
+  getdata: function (product_id) {//定义函数名称
+    var that = this;
+    wx.request({
+      url: 'http://mall.yzidea.net/index.php/xcxapi/product/detail/' + product_id,//请求地址
+      header: {//请求头
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",//get为默认方法/POST
+      success: function (res) {
+        console.log(res.data.details);
+
+        that.setData ({
+          details: res.data.details
+        })
+        // console.log(that.data.details)
+
+        // that.setData({
+        //   products: res.data
+        // })
+      },
+      fail: function (err) { },//请求失败
+      complete: function () { }//请求完成后执行的函数
+    })
+  },
+
+
+
 })

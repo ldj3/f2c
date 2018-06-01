@@ -1,3 +1,4 @@
+ @import "/lib/style/icon.wxss";
 /* pages/goods/goods.wxss */
 page {
   background: #fff;
@@ -26,6 +27,11 @@ page {
  position: fixed;
  top: 50rpx;
  left: 35rpx;
+ 
+}
+.iconfont{
+  font-size:35px;
+ 
 }
 
 .goods_nav_search {
@@ -177,6 +183,7 @@ page {
   right: 30rpx;
   top: 70%;
 }
+
 /* 底部导航 */
 .goods_detail_nav {
   position: fixed;

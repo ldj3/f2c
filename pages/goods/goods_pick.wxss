@@ -1,0 +1,61 @@
+/* pages/goods/goods_pick.wxss */
+.screen-header {
+  height: 45px;
+  border-bottom: 1px solid #D9D9D9;
+  margin-top: 40px;
+  font-size: 30rpx;
+}
+.screen-header-text {
+  line-height: 50px;
+  margin-left: 10px!important;
+}
+
+.screen-header-cancel {
+    float: right;
+    margin-right: 10px;
+    background: #fff;
+    padding: 5px 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    margin-top: 8px;
+}
+
+.screen-nav {
+    height: 45px;
+    border-bottom: 1px solid #D9D9D9;
+    background: #fff;
+    line-height: 50px;
+    font-size: 30rpx;
+}
+.ml-10 {
+    margin-left: 10px!important;
+}
+
+.screen-service {
+    height: 45px;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #D9D9D9;
+    background: #fff;
+    line-height: 50px;
+    margin-top: 15px;
+    font-size: 30rpx;
+}
+
+.screen-monery-intervalle {
+    height: 100px;
+    background: #fff;
+}
+
+.screen-monery-intervalle-input {
+    border: 1px solid #eee!important;
+    width: 40px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 13px;
+    -webkit-appearance: none;
+    color: #666666;
+    outline: none;
+    border-radius: 0;
+}

@@ -1,0 +1,16 @@
+<view class='body'>
+  <view class='screen-header'>
+    <text class='screen-header-text'>筛选</text>
+    <text class='screen-header-cancel'>取消</text>
+  </view>
+  <view class='screen-nav'>
+    <text class='ml-10'>全部分类</text>
+  </view>
+  <view class='screen-service'>
+    <text class='ml-10'>价格区间</text>
+  </view>
+  <view class='screen-monery-intervalle'>
+    <input class='screen-monery-intervalle-input' type="text" id="min_price" name="min_price" value="" placeholder="最低价" ></input>
+  </view>
+
+</view>
